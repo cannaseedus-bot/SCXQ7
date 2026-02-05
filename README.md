@@ -6,6 +6,7 @@
 - [Hybrid Wormhole Architecture: The Tiered Control Plane](docs/hybrid-wormhole-architecture.md)
 - [π-Adapter Interface v1 (Locked)](docs/pi-adapter-interface-v1.md)
 - [Central Binomial Series Identity (π + 3)](docs/pi-series-identity.md)
+- [WORMHOLE-SPEC v1 (Locked)](docs/wormhole-spec-v1.md)
 ## SCXQ7: Executable Data Objects
 
 ```
@@ -737,7 +738,7 @@ Reality only changes when SCXQ7 says yes.**
 
 ## SCXQ2 Enhanced Inference Engine
 
-See the SCXQ2 inference engine compression reference in `scxq2-inference-engine.md`.【F:scxq2-inference-engine.md†L1-L299】
+See the SCXQ2 inference engine compression reference in `docs/scxq2-inference-engine.md`.【F:docs/scxq2-inference-engine.md†L1-L299】
 
 ## SCO/1 Formalization (Locked)
 
@@ -1455,7 +1456,7 @@ The registry format is append-only, declarative, and non-authoritative.
 Canonical schema, mirror rules, and SCXQ2 lane packing for IDB are published in the frozen core spec.
 
 - File: `idb.schema.xsd`
-- Spec: `idb-stack-frozen-core-v1.md`
+- Spec: `docs/idb-stack-frozen-core-v1.md`
 
 ---
 
