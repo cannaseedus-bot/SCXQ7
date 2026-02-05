@@ -1,0 +1,76 @@
+{
+  "@conformance": "pi-gccp.v1",
+  "@status": "normative",
+  "@scope": "engine",
+  "required_invariants": [
+    "pi-gccp.half-turn.series.v1",
+    "pi-gccp.mobius.v1"
+  ],
+  "required_capabilities": {
+    "geometry": {
+      "phase": true,
+      "orientation": true,
+      "non-orientable-manifolds": true
+    },
+    "algebra": {
+      "exact-factorial": true,
+      "binomial-normalization": true,
+      "series-collapse": true
+    },
+    "execution": {
+      "deterministic": true,
+      "profile-independent": true,
+      "training-less": true
+    }
+  },
+  "kernel_requirements": {
+    "wgsl": {
+      "must_support": [
+        "angle-computation",
+        "phase-wrapping",
+        "orientation-flip",
+        "branchless-mask"
+      ],
+      "precision": "f64 | exact-emulation"
+    },
+    "cpu_fallback": {
+      "required": true,
+      "mode": "exact-math",
+      "approximation": "forbidden"
+    }
+  },
+  "retrieval_requirements": {
+    "integration": "object://retrieve/semantic.v1",
+    "ordering": "geometry-dominant",
+    "embedding_role": "optional-accelerator",
+    "ngram_role": "index-only"
+  },
+  "validation_tests": [
+    {
+      "id": "half-turn-closure",
+      "expectation": "π + finite-residue",
+      "tolerance": 0
+    },
+    {
+      "id": "mobius-inversion",
+      "expectation": "semantic-equivalence-under-orientation-flip",
+      "tolerance": 0
+    },
+    {
+      "id": "profile-invariance",
+      "expectation": "ordering-identical-across-profiles",
+      "tolerance": 0
+    }
+  ],
+  "forbidden": [
+    "probabilistic-ranking",
+    "training-updates",
+    "gradient-descent",
+    "approximate-numerics",
+    "embedding-only-semantic-decision"
+  ],
+  "compliance_result": {
+    "pass": "engine-may-advertise pi-gccp.v1",
+    "fail": "engine-must-not-claim pi-gccp compatibility"
+  }
+}

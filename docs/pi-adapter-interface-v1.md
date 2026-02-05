@@ -379,6 +379,89 @@ Only geometry mattered.
 
 ---
 
+## 3.6 object://retrieve/semantic.v1 (π-GCCP extension)
+
+This extension wires the half-turn theorem into retrieval **without special cases**.
+
+```json
+{
+  "@object": "object://retrieve/semantic.v1",
+  "@extension": "pi-gccp",
+  "retrieval_modes": {
+    "symbolic": true,
+    "geometric": true,
+    "embedding": "optional",
+    "ngram": "optional"
+  }
+}
+```
+
+### Kernel registration
+
+```json
+{
+  "@register": "pi-gccp.kernel",
+  "id": "half-turn.series",
+  "theorem": "pi-gccp.half-turn.series.v1",
+  "inputs": {
+    "query_tensor": "SVG-Tensor",
+    "profile": "pi-profile | null"
+  },
+  "outputs": {
+    "score": "scalar",
+    "explanation": "collapse-trace",
+    "proof": "optional"
+  },
+  "execution": {
+    "gpu": "wgsl",
+    "cpu_fallback": "exact-math",
+    "determinism": true
+  }
+}
+```
+
+### Retrieval flow (authoritative)
+
+```text
+query
+  → tensorize (SVG-Tensor)
+  → phase-project (k·π/2)
+  → apply half-turn mask
+  → evaluate factorial weight
+  → collapse via Σ
+  → return score + trace
+```
+
+---
+
+## 3.7 Profile-independent retrieval primitive
+
+This kernel is **profile-independent** because the phase and mask are fixed by law.
+
+```json
+{
+  "@claim": "profile-independence",
+  "reason": [
+    "phase invariant fixed (π/2)",
+    "mask eliminates profile-sensitive modes",
+    "geometric closure dominates ranking"
+  ],
+  "result": "ordering preserved across all pi-profiles"
+}
+```
+
+Semantics are alignment-only:
+
+```text
+semantic_score =
+  geometric_alignment(query, invariant)
+  + finite_residue
+```
+
+No embeddings required. If embeddings exist, they are **inputs**, not drivers.
+
+---
+
 # Final Lock
 
 ### What is now frozen
