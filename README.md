@@ -2,11 +2,11 @@
 <img src=https://github.com/cannaseedus-bot/SCXQ7/blob/main/SMCA_1.png>
 ## KUHUL Notes
 
-- [KUHUL: Simulator Boundary Notes](kuhul-simulator-boundary.md)
-- [Hybrid Wormhole Architecture: The Tiered Control Plane](hybrid-wormhole-architecture.md)
-- [π-Adapter Interface v1 (Locked)](pi-adapter-interface-v1.md)
-- [Central Binomial Series Identity (π + 3)](pi-series-identity.md)
-- [WORMHOLE-SPEC v1 (Locked)](wormhole-spec-v1.md)
+- [KUHUL: Simulator Boundary Notes](docs/kuhul-simulator-boundary.md)
+- [Hybrid Wormhole Architecture: The Tiered Control Plane](docs/hybrid-wormhole-architecture.md)
+- [π-Adapter Interface v1 (Locked)](docs/pi-adapter-interface-v1.md)
+- [Central Binomial Series Identity (π + 3)](docs/pi-series-identity.md)
+- [WORMHOLE-SPEC v1 (Locked)](docs/wormhole-spec-v1.md)
 ## SCXQ7: Executable Data Objects
 
 ```
@@ -45,7 +45,7 @@
 
 ## SCXQ7: Stateful Causal Engine (CSE/1)
 
-The causal-state extension defines stepwise validation, causal integrity, and novelty-safe constraint expansion for SCXQ7 execution. See `scxq7-causal-state-engine.md` for the full specification.【F:scxq7-causal-state-engine.md†L1-L142】
+The causal-state extension defines stepwise validation, causal integrity, and novelty-safe constraint expansion for SCXQ7 execution. See `docs/scxq7-causal-state-engine.md` for the full specification.【F:docs/scxq7-causal-state-engine.md†L1-L142】
 
 ## SCXQ7 File Ecosystem
 
@@ -738,7 +738,7 @@ Reality only changes when SCXQ7 says yes.**
 
 ## SCXQ2 Enhanced Inference Engine
 
-See the SCXQ2 inference engine compression reference in `scxq2-inference-engine.md`.【F:scxq2-inference-engine.md†L1-L299】
+See the SCXQ2 inference engine compression reference in `docs/scxq2-inference-engine.md`.【F:docs/scxq2-inference-engine.md†L1-L299】
 
 ## SCO/1 Formalization (Locked)
 
@@ -1456,7 +1456,7 @@ The registry format is append-only, declarative, and non-authoritative.
 Canonical schema, mirror rules, and SCXQ2 lane packing for IDB are published in the frozen core spec.
 
 - File: `idb.schema.xsd`
-- Spec: `idb-stack-frozen-core-v1.md`
+- Spec: `docs/idb-stack-frozen-core-v1.md`
 
 ---
 
