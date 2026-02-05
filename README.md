@@ -36,6 +36,47 @@
        "Self-contained executable data objects"
 ```
 
+## Controlled Cognitive System (CCS) — LLM + SCXQ7 Boundary (Locked)
+
+```
+LLM        = Agent / Proposer / Narrator
+SCXQ7      = Micro-Atomic Executor / Causal Kernel
+CM-1       = Pre-semantic Control Geometry
+------------------------------------------
+SYSTEM     = Governed Cognitive Runtime
+```
+
+**Canonical name:** **CCS — Controlled Cognitive System**
+
+### Authority Chain (Frozen)
+
+```
+CM-1   → XCFE Phase Law
+XCFE   → SCXQ7 Execution
+SCXQ7  → State Commit / Reject
+LLM    → Proposals ONLY
+```
+
+### Control Boundary (Non-Negotiable)
+
+* **CM-1 is owned by SCXQ7 only.**
+* **The LLM never emits CM-1.**
+* **The LLM never signals phases, boundaries, or parsing control.**
+
+### Role Split (Exact)
+
+**LLM (Agent / Proposer / Narrator)**
+* Allowed: propose, explain, suggest, narrate.
+* Forbidden: emit CM-1, emit control characters, influence parsing, influence execution.
+
+**SCXQ7 (Micro-Atomics / Executor)**
+* Allowed: consume CM-1, validate transitions, enforce invariants, commit or reject.
+* Forbidden: narration, persuasion, speculation.
+
+### One-Sentence Law (Locked)
+
+> **The LLM may propose meaning. CM-1 constrains interpretation. SCXQ7 alone commits reality.**
+
 ## SCXQ7 File Ecosystem
 
 ```
