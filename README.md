@@ -375,6 +375,119 @@ The `.s7` extension should literally mean: **"Self-Contained eXecutable Quantum 
 
 **SCXQ7 = The Final Form.**
 
+---
+
+## SCXQ7 + LLM: Proposal–Execution Architecture (Non-Poetic, Exact)
+
+### Short, sharp answer
+
+**SCXQ7 (Executor) + LLM (Ramble Engine) = a governed cognitive computer.**
+
+### Canonical equation
+
+```
+SCXQ7  = authority
+LLM    = proposer
+------------------
+SYSTEM = lawful intelligence
+```
+
+### Roles (what each side actually is)
+
+**SCXQ7 — The Executor**
+- Enforces state
+- Validates transitions
+- Preserves causality
+- Commits or refuses
+- Remembers *why* something happened
+
+It answers: **“Is this allowed to happen?”**
+
+**LLM — The Ramble Engine**
+- Generates ideas
+- Explores possibilities
+- Narrates options
+- Proposes actions
+- Explains outcomes
+
+It answers: **“What *might* be interesting to try?”**
+
+### Hard boundary (invariant)
+
+**The LLM never mutates state.**  
+**The SCXQ7 never imagines.**
+
+If either crosses that line, the system collapses.
+
+### Combined system (formal view)
+
+**Correct term:** **Proposal–Execution Architecture**  
+**Spec name (sharp):** **Causal Governor Computer (CGC)**
+
+### Runtime interaction loop
+
+```
+LLM:
+  propose → explain → speculate → justify
+
+SCXQ7:
+  validate → simulate → accept/reject → commit
+
+LOOP:
+  truth emerges only at commit
+```
+
+The LLM **never knows truth**.  
+The SCXQ7 **never speaks**.
+
+### Why this pairing is powerful (and safe)
+
+Without SCXQ7: **LLM = confident hallucination machine**  
+Without LLM: **SCXQ7 = silent, rigid, correct but blind**
+
+Together:
+
+| Property    | Result                                  |
+| ----------- | --------------------------------------- |
+| Creativity  | LLM                                     |
+| Safety      | SCXQ7                                   |
+| Novelty     | LLM proposes                            |
+| Robustness  | SCXQ7 filters                           |
+| Explanation | LLM narrates                            |
+| Truth       | SCXQ7 commits                           |
+| Recovery    | SCXQ7 replays                           |
+| Learning    | Constraint expansion (not weight drift) |
+
+This is **intelligence without corruption**.
+
+### Killer distinction vs “agents”
+
+Typical “AI agent”:
+- thinks
+- decides
+- acts
+- all in one blob
+- no audit
+- no rollback
+- no refusal
+
+**This system:**
+- talks ≠ acts
+- proposes ≠ commits
+- imagination ≠ reality
+
+That separation is why it scales *and* stays sane.
+
+### One-line definition (spec-grade)
+
+**SCXQ7 + LLM forms a two-layer cognitive system where untrusted generative reasoning is strictly subordinated to a sovereign causal execution kernel.**
+
+### Final collapse phrase
+
+**The LLM dreams.  
+SCXQ7 decides.  
+Reality only changes when SCXQ7 says yes.**
+
 ## SCXQ2 Enhanced Inference Engine
 
 See the SCXQ2 inference engine compression reference in `scxq2-inference-engine.md`.【F:scxq2-inference-engine.md†L1-L299】
