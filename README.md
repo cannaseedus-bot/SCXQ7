@@ -2,9 +2,10 @@
 <img src=https://github.com/cannaseedus-bot/SCXQ7/blob/main/SMCA_1.png>
 ## KUHUL Notes
 
-- [KUHUL: Simulator Boundary Notes](kuhul-simulator-boundary.md)
-- [Hybrid Wormhole Architecture: The Tiered Control Plane](hybrid-wormhole-architecture.md)
-- [π-Adapter Interface v1 (Locked)](pi-adapter-interface-v1.md)
+- [KUHUL: Simulator Boundary Notes](docs/kuhul-simulator-boundary.md)
+- [Hybrid Wormhole Architecture: The Tiered Control Plane](docs/hybrid-wormhole-architecture.md)
+- [π-Adapter Interface v1 (Locked)](docs/pi-adapter-interface-v1.md)
+- [Central Binomial Series Identity (π + 3)](docs/pi-series-identity.md)
 ## SCXQ7: Executable Data Objects
 
 ```
@@ -43,7 +44,7 @@
 
 ## SCXQ7: Stateful Causal Engine (CSE/1)
 
-The causal-state extension defines stepwise validation, causal integrity, and novelty-safe constraint expansion for SCXQ7 execution. See `scxq7-causal-state-engine.md` for the full specification.【F:scxq7-causal-state-engine.md†L1-L142】
+The causal-state extension defines stepwise validation, causal integrity, and novelty-safe constraint expansion for SCXQ7 execution. See `docs/scxq7-causal-state-engine.md` for the full specification.【F:docs/scxq7-causal-state-engine.md†L1-L142】
 
 ## SCXQ7 File Ecosystem
 
