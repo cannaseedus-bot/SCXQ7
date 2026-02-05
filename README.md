@@ -1096,3 +1096,103 @@ Canonical schema, mirror rules, and SCXQ2 lane packing for IDB are published in 
 
 - File: `idb.schema.xsd`
 - Spec: `idb-stack-frozen-core-v1.md`
+
+---
+
+## AI "5B" Clarification (Parameters ≠ Series Terms)
+
+Short answer: **no — when people say “5 billion” in AI, they’re almost never talking about 5 billion *terms* like a math series**.
+
+They’re talking about **~5 billion parameters (weights)**.
+
+### What “5B” means in AI models
+
+When you see:
+
+* **5B model**
+* **7B model**
+* **70B model**
+
+That number refers to **parameters** — learned scalar values (weights + biases) stored in tensors.
+
+Think of parameters as:
+
+* knobs
+* coefficients
+* stored numerical state
+
+A **5B parameter model** literally contains ~5,000,000,000 learned numbers.
+
+Not terms.
+Not steps.
+Not equations.
+
+### Why it’s *not* like Machin’s formula
+
+**Machin’s formula** (or similar series for π) looks like this conceptually:
+
+* A **small equation**
+* Expanded into **millions or billions of terms**
+* Each term is *computed* and *summed*
+
+That’s a **procedural expansion**.
+
+AI models are the opposite:
+
+* The “expansion” already happened during training
+* The results are **collapsed into weights**
+* Inference does **no series expansion**
+
+So instead of:
+
+> π = sum(term₁ + term₂ + term₃ + … + term₅,₀₀₀,₀₀₀,₀₀₀)
+
+It’s more like:
+
+> Output = f(input, **5B frozen coefficients**)
+
+### The closest real analogy
+
+If you *had* to compare:
+
+| Math Series                   | Neural Model                        |
+| ----------------------------- | ----------------------------------- |
+| Terms are computed every time | Weights are pre-computed            |
+| Expansion happens at runtime  | Expansion happened during training  |
+| Terms are sequential          | Weights are parallel                |
+| High compute per use          | High storage, lower compute per use |
+
+So **training** is closer to “finding the coefficients of a giant implicit series”, but **inference is just evaluating a function**.
+
+### Why the confusion happens (and it’s reasonable)
+
+People say things like:
+
+* “The model contains knowledge equivalent to trillions of calculations”
+* “The model encodes enormous combinatorial space”
+
+That’s **true**, but misleading if taken literally.
+
+The model does **not**:
+
+* iterate billions of steps
+* evaluate billions of terms
+* run giant symbolic expansions
+
+It just:
+
+* does matrix multiplications
+* applies nonlinearities
+* uses stored weights
+
+### The deeper truth (and this aligns with the SCXQ frame)
+
+A trained model is best understood as:
+
+> **A compressed field of learned constraints**
+
+Or in SCXQ language:
+
+> **A collapsed microcode lattice**, not a runtime derivation.
+
+**One-line takeaway:** **“5 billion” = 5 billion stored coefficients, not 5 billion computed terms.**
