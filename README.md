@@ -1,4 +1,4 @@
-# SCXQ7
+# SMCAv1
 <img src=https://github.com/cannaseedus-bot/SCXQ7/blob/main/SMCA_1.png>
 ## SCXQ7: Executable Data Objects
 
