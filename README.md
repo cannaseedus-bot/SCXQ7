@@ -36,36 +36,9 @@
        "Self-contained executable data objects"
 ```
 
-## SCXQ7 Output Contract (Locked)
+## SCXQ7: Stateful Causal Engine (CSE/1)
 
-```
-@scxq7.output.contract
-  modes:
-    - binary_authority
-    - proof_objects
-
-  @binary_authority
-    forms: [YES|NO, 1|0, TRUE|FALSE, COMMIT|REJECT]
-    rule: "answers only whether reality can change"
-
-  @proof_objects
-    structures:
-      - π_weighted_geometry
-      - constraint_manifolds
-      - causal_graphs
-      - state_deltas
-      - proofs
-      - invariants
-      - hashes
-      - trajectories
-    rule: "structures only; no narrative"
-
-  @prohibitions
-    - explanation
-    - persuasion
-    - narration
-    - speculation
-```
+The causal-state extension defines stepwise validation, causal integrity, and novelty-safe constraint expansion for SCXQ7 execution. See `scxq7-causal-state-engine.md` for the full specification.【F:scxq7-causal-state-engine.md†L1-L142】
 
 ## SCXQ7 File Ecosystem
 
