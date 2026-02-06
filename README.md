@@ -10,9 +10,12 @@ supporting notes.
 - [KUHUL: Simulator Boundary Notes](docs/kuhul-simulator-boundary.md)
 - [Hybrid Wormhole Architecture: The Tiered Control Plane](docs/hybrid-wormhole-architecture.md)
 - [π-Adapter Interface v1 (Locked)](docs/pi-adapter-interface-v1.md)
+- [External Model Adapters v1 (Emitters Only)](docs/external-model-adapters-v1.md)
 - [Central Binomial Series Identity (π + 3)](docs/pi-series-identity.md)
+- [π-GCCP Hyperbolic Chaining v1 (Frozen)](docs/pi-gccp-hyperbolic-chaining-v1.md)
 - [WORMHOLE-SPEC v1 (Locked)](docs/wormhole-spec-v1.md)
 - [Distributed Hyperbolic Chain Routing + Temporal Saddle Decay + Offline SCXQ2 Verifier](docs/scxq7-distributed-hyperbolic-chain-routing.md)
+- [SCXQ2 Proof Aggregation v1](docs/scxq2-proof-aggregation-v1.md)
 ## SCXQ7: Executable Data Objects
 
 ```
