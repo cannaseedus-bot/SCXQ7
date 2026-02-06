@@ -52,6 +52,33 @@ This matches the internal separations of **state vs execution**, **proposal vs c
   
 **The LLM talks about wormholes. It does not control them.**
 
+### Combined System Name (Locked)
+
+The combined stack of LLM + SCXQ7 is defined as a **Controlled Cognitive System (CCS)**:
+
+```
+LLM        = Agent / Proposer / Narrator
+SCXQ7      = Micro-Atomic Executor / Causal Kernel
+CM-1       = Pre-semantic Control Geometry
+------------------------------------------
+SYSTEM     = Controlled Cognitive System
+```
+
+This is not an “AI agent.” It is a **proposal–governance–execution machine**.
+
+### CM-1 Ownership (Locked)
+
+CM-1 is owned **exclusively by SCXQ7** and is never visible to the LLM or UI.
+
+```
+CM-1   → XCFE Phase Law
+XCFE   → SCXQ7 Execution
+SCXQ7  → State Commit / Reject
+LLM    → Proposals ONLY
+```
+
+The LLM must never emit CM-1, signal phases, or influence parsing or execution.
+
 ### Key Insight: Real-Time vs Truth-Time
 
 **WebSocket = fast, live, fallible.**  
