@@ -1,0 +1,55 @@
+{
+  "@schema": "scxq7.object.v1",
+
+  "@identity": {
+    "object_id": "counter.service",
+    "class": "SCO/1"
+  },
+
+  "@state": {
+    "counter": {
+      "type": "int",
+      "initial": 0,
+      "invariants": ["counter >= 0"]
+    }
+  },
+
+  "@capabilities": {
+    "read": ["counter"],
+    "mutate": ["counter"],
+    "project": ["http"]
+  },
+
+  "@steps": [
+    {
+      "@step": "increment",
+      "cause": "event.inc",
+      "validate": ["counter >= 0"],
+      "effect": {
+        "counter": { "+": 1 }
+      }
+    }
+  ],
+
+  "@queries": {
+    "counter.read": {
+      "read": "counter"
+    }
+  },
+
+  "@projections": {
+    "http": {
+      "GET /db": {
+        "query": "counter.read"
+      },
+      "GET /chat": {
+        "emit": "Hello, World!"
+      }
+    }
+  },
+
+  "@collapse": {
+    "mode": "stepwise",
+    "proof": true
+  }
+}
