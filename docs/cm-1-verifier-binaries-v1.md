@@ -245,3 +245,5 @@ Every binary **must** produce identical outputs for all vectors.
 
 > **CM-1 now exists as math, text, and machine.**
 > **Any disagreement between them is an implementation bug, not a design question.**
+
+If you want the **download manifest**, **signed release bundle**, or **IDB anchor emission**, say the word.
