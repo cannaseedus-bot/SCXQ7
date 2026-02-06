@@ -158,7 +158,99 @@ XML executes axioms; it does not define them.
 
 ---
 
-## 4. Formal separation of authority
+## 4. Non-negotiable invariants
+
+These are required for soundness, not style.
+
+### Invariant A — TOML is inert
+
+TOML **must not**:
+
+* Reference phases
+* Reference order
+* Reference execution targets
+* Reference kernels
+* Emit values
+* Depend on runtime state
+
+If TOML can "do" anything, the system is broken. It may only **constrain**.
+
+### Invariant B — XML is subordinate
+
+XML **must**:
+
+* Name its TOML authority explicitly
+* Fail closed if axioms are missing or invalid
+* Never redefine constants
+* Never widen bounds
+* Never introduce new domains
+
+XML may *apply* π. XML may not *define* π.
+
+### Invariant C — One-way authority
+
+```
+TOML ─┬─▶ XML ─┬─▶ Kernels ─┬─▶ SCXQ2
+      │        │           │
+      └───X────┴────X──────┴── (no back edges)
+```
+
+Execution must not influence axioms. If it does, the system becomes a simulator, not law.
+
+---
+
+## 5. Why TOML/XML is the correct split
+
+This is not arbitrary taste. The formats enforce behavior.
+
+### Why TOML works for axioms
+
+* Key/value only
+* No ordering semantics
+* No implicit execution model
+* Deterministic hashing
+* Diff-stable
+* Human-auditable
+* DNS-friendly
+
+TOML is constitution-shaped: it may be cited, but never executed.
+
+### Why XML works for execution
+
+* Order is explicit
+* Nesting encodes phase structure
+* Side-effects are visible
+* Namespaces enforce scope
+* Replayable as a trace
+* Transformable without mutation
+
+XML is not logic. It is **ceremony**. That makes it fit execution phases.
+
+---
+
+## 6. The subtle trap (and the guardrail)
+
+Defaults in XML are fatal unless already bounded in TOML.
+
+Correct pattern:
+
+```xml
+<kernel epsilon="0.1745329" />
+```
+
+Only legal if TOML has bounded the domain:
+
+```toml
+[axiom.bounds]
+epsilon_min = 0.0
+epsilon_max = "pi"
+```
+
+If XML introduces a value outside TOML's declared domain, the runtime must **hard-fail**.
+
+---
+
+## 7. Formal separation of authority
 
 | Layer      | Authority             |
 | ---------- | --------------------- |
@@ -171,7 +263,7 @@ This prevents semantic drift.
 
 ---
 
-## 5. Where schemas fit now
+## 8. Where schemas fit now
 
 JSON Schemas become **validation axioms**, subordinate to TOML:
 
@@ -191,7 +283,7 @@ This is a complete logical stack.
 
 ---
 
-## 6. Why this matters
+## 9. Why this matters
 
 Because now:
 
@@ -206,7 +298,7 @@ Most AI systems cannot do this because they mix axioms and execution. π-GCCP do
 
 ---
 
-## 7. The one-line law
+## 10. The one-line law
 
 > **TOML declares what exists.**  
 > **XML declares how it unfolds.**
@@ -215,7 +307,7 @@ That is formal system design, not style.
 
 ---
 
-## 8. Next formalizations
+## 11. Next formalizations
 
 If needed, extend with:
 
