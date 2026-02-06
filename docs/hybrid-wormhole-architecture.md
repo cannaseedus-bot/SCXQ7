@@ -39,6 +39,8 @@ This matches the internal separations of **state vs execution**, **proposal vs c
 - Optimize **latency, battery, cost**.
 - Provide **defense in depth**.
 - Carry **no authority**.
+  
+**Wormholes do not decide. They deliver.**
 
 **LLM (Agent / Ramble Engine)**
 - Uses discovery results to reason.
@@ -47,6 +49,8 @@ This matches the internal separations of **state vs execution**, **proposal vs c
 - Narrates state transitions.
 - Proposes actions.
 - Never emits CM-1, never signs SCXQ2, never commits state.
+  
+**The LLM talks about wormholes. It does not control them.**
 
 ### Key Insight: Real-Time vs Truth-Time
 
@@ -67,6 +71,8 @@ Reality collapses **once**, even if DNS/HTTP/WS are noisy or adversarial.
 ### Formal Name
 
 This architecture is a **Tiered Causal Transport Architecture (TCTA)** with **Hybrid Wormholes** as its concrete realization.
+
+In SCXQ7 terms, this is the **ASXR Hybrid Wormhole Control Plane**.
 
 ### Final Seal
 
