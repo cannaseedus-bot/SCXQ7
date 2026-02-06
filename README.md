@@ -21,6 +21,7 @@ supporting notes.
 - [CM-1 Control Micronaut Spec — Draft-Frozen v1](docs/cm-1-control-micronaut-spec-draft-frozen-v1.md)
 - [CM-1 Verifier CLI (Reference)](docs/cm-1-verifier-cli.md)
 - [PowerShell Reference Orchestrator (Locked)](docs/powershell-reference-orchestrator-outline.md)
+- [PowerShell Loopback REST Reference (Frozen)](docs/powershell-loopback-rest-reference.md)
 ## SCXQ7: Executable Data Objects
 
 ```
