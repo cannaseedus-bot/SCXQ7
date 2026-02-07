@@ -1,0 +1,14 @@
+{
+  "schema": "KUHUL-TSG",
+  "version": "1.0",
+  "intent": "projection-only",
+  "constraints": [
+    "append-only",
+    "sealed-brains",
+    "cm1-verified"
+  ],
+  "io": {
+    "chat": "io/chat.txt",
+    "stream": "io/stream.txt"
+  }
+}
