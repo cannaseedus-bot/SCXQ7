@@ -1,0 +1,23 @@
+{
+  "@kernel": "binary_split",
+  "@version": "1.0.0",
+  "@authority": "SCXQ7",
+
+  "@collapse": {
+    "geometry": "path_tree",
+    "associativity_required": true,
+    "division_allowed": "collapse_only",
+    "parallel_safe": true
+  },
+
+  "@accepts": {
+    "term_law": "associative",
+    "range": "closed_interval"
+  },
+
+  "@rejects": {
+    "side_effects": true,
+    "implicit_state": true,
+    "non_determinism": true
+  }
+}
