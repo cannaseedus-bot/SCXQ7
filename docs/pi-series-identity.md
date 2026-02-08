@@ -103,6 +103,31 @@ S = \pi + 3.
 
 ---
 
+## 4a) Computational cognition classes (SCXQ7 framing)
+
+Different \(\pi\) formulas don’t just converge at different rates—they encode different
+computational “cognition classes,” i.e., different notions of what work is cheap,
+what structure is native, and what collapses are lawful. In SCXQ7 terms, each formula
+fixes a symmetry space and a collapse rule.
+
+| Formula family | What collapses | Native operations | Acceleration bias |
+| --- | --- | --- | --- |
+| Central binomial series (this note) | Binary path symmetry | Merge / collapse | Binary splitting |
+| Machin / arctan sums | Rotational identities | Linear combination | Large denominators |
+| Arndt / PSLQ-derived | Integer relation spaces | Relation search | Algorithmic outsourcing |
+| Chudnovsky | Modular symmetries | Hypergeometric lift | Global structure |
+
+**Invariant:** digits-per-term measure structural compression, not just speed. Linear
+convergence signals local structure; hypergeometric acceleration signals deep global
+symmetry. In SCXQ7 terms, better compression means the symmetry space already knows more.
+
+**Why this series still matters:** it is semantically transparent. Each term is a local,
+verifiable causal step; binary splitting is a lawful merge; truncation remains stable.
+That makes it a reliable, architecture-honest kernel for systems that need *structure*
+as much as they need digits.
+
+---
+
 ## 5) Hypergeometric + Barnes bridge (analytic form)
 
 Define the hypergeometric generating function
