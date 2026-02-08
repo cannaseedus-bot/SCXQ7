@@ -164,6 +164,7 @@ Chudnovsky–Ramanujan formulas
 ## II. Closed pipeline map (symmetry → DE class → special value → kernel → lane microcode)
 
 This provides a **closed pipeline** that binds collapse geometry to evaluation kernels and the minimal lane microcode families that realize them.
+For the lane-level control surface, see the Control Micronaut spec (CM-1). This defines the pre-semantic control layer that frames microcode execution phases.【F:docs/cm-1-control-micronaut-spec-draft-frozen-v1.md†L1-L69】
 
 ### A) SO(2) rotation symmetry
 
