@@ -1,0 +1,6 @@
+{
+  "@schema": "smca.kernel.v1",
+  "@id": "binary_split",
+  "description": "Binary split kernel for collapse geometry verification.",
+  "cm1_profile": "cm1/core/v1"
+}

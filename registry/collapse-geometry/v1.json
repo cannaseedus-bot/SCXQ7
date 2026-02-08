@@ -1,0 +1,12 @@
+{
+  "@schema": "smca.collapse.geometry.v1",
+  "@authority": "SMCA/1",
+  "@frozen": true,
+  "geometry": {
+    "nodes": ["origin", "split", "merge"],
+    "edges": [
+      {"from": "origin", "to": "split", "type": "binary"},
+      {"from": "split", "to": "merge", "type": "recombine"}
+    ]
+  }
+}

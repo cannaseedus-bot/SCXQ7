@@ -1,0 +1,14 @@
+{
+  "@schema": "smca.cm1.profiles.v1",
+  "profiles": {
+    "cm1/core/v1": {
+      "dictionary": "src/scxq2/cm1.dict.json",
+      "lane_schema": "src/scxq2/lane.schema.json",
+      "rules": {
+        "start": ["SOH", "STX"],
+        "triplet": ["SO", "RS", "SI"],
+        "end": ["ETX", "EOT"]
+      }
+    }
+  }
+}

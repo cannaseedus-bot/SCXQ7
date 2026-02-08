@@ -5,6 +5,22 @@
 Reference material for the SCXQ7/SMCA stack, including specs, examples, and
 supporting notes.
 
+## SMCA-REF-1 Reference Implementation
+
+This repository now includes the **SMCA-REF-1** reference implementation for
+SCXQ7 collapse geometry conformance:
+
+1. Builds a CM-1 verifier to WASM (`src/cm1` → `wasm/cm1_verify.wasm`)
+2. Runs deterministic conformance vectors (`conformance/`)
+3. Publishes immutable registry artifacts (`registry/`)
+4. Generates deterministic compliance badges (`src/badges/`)
+
+If CI passes, the implementation is lawful. If CI fails, it is illegal.
+
+Note: the checked-in WASM payload is stored as `wasm/cm1_verify.wasm.txt` (base64)
+to satisfy GitHub binary restrictions; rename it back to
+`wasm/cm1_verify.wasm` after decoding when you need a raw WASM binary.
+
 ## KUHUL Notes
 
 - [KUHUL: Simulator Boundary Notes](docs/kuhul-simulator-boundary.md)
