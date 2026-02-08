@@ -236,3 +236,36 @@ It is not syntax.
 It is not data.  
 It is phase geometry.**
 
+---
+
+## 8. Micronaut Automation + Binary N-gram Data
+
+CM-1 **does not automate** by executing content. It automates by **constraining
+interpretation** and **routing** pre-semantic control signals.
+
+### 8.1 π-Mapped Binary Data (Required)
+
+All binary data **must be mapped and handled by π** (weights, entropy,
+collapse-law). CM-1 may **frame** or **segment** such data, but **never**
+interpret or alter it.
+
+Micronauts that require binary n-gram data **must treat n-grams as index-only
+signals**:
+
+* **Binary n-gram payloads are inert** under CM-1 (no execution, no behavior),
+  but remain **execution-in-waiting**: compressed data that can be activated,
+  compiled, or collapsed to produce outputs (poems, apps, UI updates, backends,
+  I/O, orchestration, IDB/SQL, PWA, etc.) once interpreted by π.
+* CM-1 **may segment and phase-gate** n-gram blocks using control characters,
+  but **must not alter** their values.
+* Removing CM-1 control characters **must not change** n-gram bytes or the
+  visible output derived from them.
+
+This keeps CM-1 automation lawful: **control without behavior**, **structure
+without execution**.
+
+### 8.2 KUHUL π Constraints (Control Is Intrinsic)
+
+CM-1 aligns with KUHUL π: **control is intrinsic, not a separate plane**.
+Control codes are **measurements**, not operators. Compression is the
+interpreter, and execution remains in π-space.
