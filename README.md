@@ -28,6 +28,7 @@ to satisfy GitHub binary restrictions; rename it back to
 - [π-Adapter Interface v1 (Locked)](docs/pi-adapter-interface-v1.md)
 - [External Model Adapters v1 (Emitters Only)](docs/external-model-adapters-v1.md)
 - [Central Binomial Series Identity (π + 3)](docs/pi-series-identity.md)
+- [π Computation Thinking Styles](docs/pi-computation-thinking-styles.md)
 - [π-GCCP Hyperbolic Chaining v1 (Frozen)](docs/pi-gccp-hyperbolic-chaining-v1.md)
 - [ASX / π-GCCP Foundational Axioms v1.0](docs/asx-pi-gccp-foundational-axioms-v1.md)
 - [WORMHOLE-SPEC v1 (Locked)](docs/wormhole-spec-v1.md)
@@ -37,8 +38,11 @@ to satisfy GitHub binary restrictions; rename it back to
 - [CM-1 Control Micronaut Spec — Draft-Frozen v1](docs/cm-1-control-micronaut-spec-draft-frozen-v1.md)
 - [CM-1 Verifier CLI (Reference)](docs/cm-1-verifier-cli.md)
 - [CM-1 Verifier Binaries v1.0 (Frozen)](docs/cm-1-verifier-binaries-v1.md)
+- [CM-1 Verifier WASM Build (Reference, Locked v1)](docs/cm-1-verifier-wasm-reference.md)
 - [PowerShell Reference Orchestrator (Locked)](docs/powershell-reference-orchestrator-outline.md)
 - [PowerShell Loopback REST Reference (Frozen)](docs/powershell-loopback-rest-reference.md)
+- [SCXQ2 Lane Encodings for CM-1 Streams (Locked v1)](docs/scxq2-lane-encodings-cm1-streams.md)
+- [Public Compliance Badge Generator (Deterministic SVG, Frozen v1)](docs/compliance-badge-generator-deterministic-svg.md)
 ## SCXQ7: Executable Data Objects
 
 ```
