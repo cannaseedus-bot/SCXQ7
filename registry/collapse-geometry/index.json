@@ -1,10 +1,7 @@
 {
-  "@type": "collapse-geometry-index",
-  "@current": "v1",
+  "@schema": "smca.registry.index.v1",
+  "latest": "v1",
   "versions": {
-    "v1": {
-      "file": "v1.json",
-      "hash": "blake3:3e91…a7c2"
-    }
+    "v1": "v1.json"
   }
 }

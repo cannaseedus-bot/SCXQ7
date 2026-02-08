@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120">
+  <rect width="420" height="120" rx="8" fill="#0b0b0b" />
+  <text x="20" y="36" fill="#ffffff" font-family="monospace" font-size="18">
+    {{GEOMETRY}}
+  </text>
+  <text x="20" y="68" fill="#b3b3b3" font-family="monospace" font-size="14">
+    Kernel: {{KERNEL}}
+  </text>
+  <text x="20" y="94" fill="#66ff99" font-family="monospace" font-size="12">
+    Hash: {{HASH}}
+  </text>
+</svg>

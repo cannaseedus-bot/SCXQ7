@@ -1,7 +1,6 @@
 {
-  "@kernel": "binary_split",
-  "@authority": "SCXQ7",
-  "@collapse_geometry": "path_tree",
-  "@cm1_profile": "balanced_scope_single_collapse",
-  "@version": "1.0.0"
+  "@schema": "smca.kernel.v1",
+  "@id": "binary_split",
+  "description": "Binary split kernel for collapse geometry verification.",
+  "cm1_profile": "cm1/core/v1"
 }

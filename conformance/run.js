@@ -1,56 +1,54 @@
-// CI Conformance Runner — SMCA/1
-// Authority: SCXQ7
-// Frozen v1
-
 import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import crypto from "crypto";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const wasmBase64 = fs
-  .readFileSync(path.join(__dirname, "wasm/cm1_verify.wasm.txt"), "utf8")
-  .trim();
-const wasmBytes = Buffer.from(wasmBase64, "base64");
-const vectors = JSON.parse(
-  fs.readFileSync(
-    path.join(__dirname, "vectors/collapse.geometry.conformance.json"),
-    "utf8"
-  )
-);
+const vectorsPath = new URL("./vectors/collapse.geometry.conformance.json", import.meta.url);
+const vectorsRaw = fs.readFileSync(vectorsPath, "utf8");
+const vectors = JSON.parse(vectorsRaw);
 
-const wasm = await WebAssembly.instantiate(wasmBytes, {});
-const verify = wasm.instance.exports.verify;
-const memory = wasm.instance.exports.memory;
+const wasmPath = new URL("../wasm/cm1_verify.wasm", import.meta.url);
+const wasmTextPath = new URL("../wasm/cm1_verify.wasm.txt", import.meta.url);
+const wasmBytes = fs.existsSync(wasmPath)
+  ? fs.readFileSync(wasmPath)
+  : Buffer.from(fs.readFileSync(wasmTextPath, "utf8"), "base64");
+const wasmModule = await WebAssembly.instantiate(wasmBytes, {});
+const { verify } = wasmModule.instance.exports;
 
-function runVector(test) {
-  if (!test.cm1) {
-    // geometry/kernel mismatch test
-    if (test.expect === "REJECT") return true;
-    return false;
-  }
+const encoder = (hex) =>
+  Uint8Array.from(
+    hex
+      .trim()
+      .split(/\s+/)
+      .map((byte) => parseInt(byte, 16))
+  );
 
-  const buf = new Uint8Array(memory.buffer, 0, test.cm1.length);
-  buf.set(test.cm1);
+let failures = 0;
+for (const vector of vectors.vectors) {
+  const input = encoder(vector.input);
+  const ptr = wasmModule.instance.exports.__heap_base || 0;
 
-  const result = verify(0, test.cm1.length) === 1 ? "ACCEPT" : "REJECT";
-  return result === test.expect;
-}
+  const memory = wasmModule.instance.exports.memory;
+  const view = new Uint8Array(memory.buffer, ptr, input.length);
+  view.set(input);
+  const result = verify(ptr, input.length);
 
-let passed = 0;
-let failed = 0;
-
-for (const test of vectors.tests) {
-  const ok = runVector(test);
-  if (ok) passed++;
-  else {
-    failed++;
-    console.error("FAIL:", test.name);
+  if (result !== vector.expect) {
+    failures += 1;
+    console.error(`FAIL ${vector.name}: expected ${vector.expect}, got ${result}`);
+  } else {
+    console.log(`PASS ${vector.name}`);
   }
 }
 
-if (failed > 0) {
-  console.error(`❌ CONFORMANCE FAILED (${failed} failures)`);
+const conformanceHash = crypto.createHash("sha256").update(vectorsRaw).digest("hex");
+const report = {
+  geometry: vectors["@geometry"],
+  kernel: vectors["@kernel"],
+  conformance_hash: conformanceHash,
+  passed: failures === 0
+};
+
+fs.writeFileSync(new URL("./report.json", import.meta.url), JSON.stringify(report, null, 2));
+
+if (failures > 0) {
   process.exit(1);
 }
-
-console.log(`✅ CONFORMANCE PASSED (${passed} tests)`);

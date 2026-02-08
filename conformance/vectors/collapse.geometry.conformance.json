@@ -1,9 +1,17 @@
 {
-  "tests": [
+  "@schema": "smca.conformance.v1",
+  "@geometry": "collapse-geometry/v1",
+  "@kernel": "binary_split",
+  "vectors": [
     {
-      "name": "cm1-always-accept",
-      "cm1": [0],
-      "expect": "ACCEPT"
+      "name": "valid_triplets",
+      "input": "01 02 0E 1E 0F 0E 1E 0F 03 04",
+      "expect": 0
+    },
+    {
+      "name": "invalid_missing_triplets",
+      "input": "01 02 0E 03 04",
+      "expect": 1
     }
   ]
 }

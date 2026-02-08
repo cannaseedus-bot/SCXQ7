@@ -1,0 +1,6 @@
+{
+  "geometry": "collapse-geometry/v1",
+  "kernel": "binary_split",
+  "conformance_hash": "e0bdb82b2404a7e19491e793ec284812687d5bb0282a4ca90744d961ea5e8684",
+  "passed": true
+}

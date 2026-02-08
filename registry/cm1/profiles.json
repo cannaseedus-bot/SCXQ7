@@ -1,9 +1,14 @@
 {
-  "@type": "cm1-profiles",
-  "@version": "1.0.0",
+  "@schema": "smca.cm1.profiles.v1",
   "profiles": {
-    "balanced_scope_single_collapse": {
-      "description": "Single-collapse scope with balanced evaluation window."
+    "cm1/core/v1": {
+      "dictionary": "src/scxq2/cm1.dict.json",
+      "lane_schema": "src/scxq2/lane.schema.json",
+      "rules": {
+        "start": ["SOH", "STX"],
+        "triplet": ["SO", "RS", "SI"],
+        "end": ["ETX", "EOT"]
+      }
     }
   }
 }
